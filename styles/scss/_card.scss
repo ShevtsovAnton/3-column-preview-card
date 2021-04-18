@@ -1,0 +1,110 @@
+.card {
+  padding: 2rem;
+  color: $transparent_white;
+  width: 15rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & .header__image {
+    background-repeat: no-repeat;
+    height: 3rem;
+  }
+
+  &:first-child {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  & .main__title {
+    font-family: "Big Shoulders Display", sans-serif;
+    color: $light_gray;
+  }
+
+  & .card__footer {
+    margin: 1.5rem 0;
+  }
+
+  & .footer__button {
+    margin: 0.5rem 0;
+    width: 8rem;
+    background-color: $light_gray;
+    padding: 0.5rem;
+    border: 2px solid $light_gray;
+    border-radius: 1rem;
+    color: $bright_orange;
+  }
+}
+
+.card.card--sedan {
+  background-color: $bright_orange;
+
+  & .header__image {
+    background-image: url(../../images/icon-sedans.svg);
+  }
+  & .footer__button {
+    color: $bright_orange;
+
+    &:hover {
+      background-color: $bright_orange;
+      color: $light_gray;
+    }
+  }
+}
+
+.card.card--suvs {
+  background-color: $dark_cyan;
+
+  & .header__image--suvs {
+    background-image: url(../../images/icon-suvs.svg);
+  }
+
+  & .footer__button {
+    color: $dark_cyan;
+
+    &:hover {
+      background-color: $dark_cyan;
+      color: $light_gray;
+    }
+  }
+}
+
+.card.card--luxury {
+  background-color: $very_dark_cyan;
+
+  & .header__image--luxury {
+    background-image: url(../../images/icon-luxury.svg);
+  }
+
+  & .footer__button {
+    color: $very_dark_cyan;
+    &:hover {
+      background-color: $very_dark_cyan;
+      color: $light_gray;
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .card {
+    &:first-child {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-end-end-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+body {
+  font-size: $body_font_size;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (min-width: 900px) {
+  .container {
+    width: 80%;
+    margin: auto;
+    flex-direction: row;
+    justify-content: center;
+  }
+}

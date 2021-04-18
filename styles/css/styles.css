@@ -1,0 +1,90 @@
+body {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif; }
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+@media only screen and (min-width: 900px) {
+  .container {
+    width: 80%;
+    margin: auto;
+    flex-direction: row;
+    justify-content: center; } }
+
+.card {
+  padding: 2rem;
+  color: rgba(255, 255, 255, 0.75);
+  width: 15rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .card .header__image {
+    background-repeat: no-repeat;
+    height: 3rem; }
+  .card:first-child {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem; }
+  .card:last-child {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem; }
+  .card .main__title {
+    font-family: "Big Shoulders Display", sans-serif;
+    color: #f2f2f2; }
+  .card .card__footer {
+    margin: 1.5rem 0; }
+  .card .footer__button {
+    margin: 0.5rem 0;
+    width: 8rem;
+    background-color: #f2f2f2;
+    padding: 0.5rem;
+    border: 2px solid #f2f2f2;
+    border-radius: 1rem;
+    color: #e38826; }
+
+.card.card--sedan {
+  background-color: #e38826; }
+  .card.card--sedan .header__image {
+    background-image: url(../../images/icon-sedans.svg); }
+  .card.card--sedan .footer__button {
+    color: #e38826; }
+    .card.card--sedan .footer__button:hover {
+      background-color: #e38826;
+      color: #f2f2f2; }
+
+.card.card--suvs {
+  background-color: #006970; }
+  .card.card--suvs .header__image--suvs {
+    background-image: url(../../images/icon-suvs.svg); }
+  .card.card--suvs .footer__button {
+    color: #006970; }
+    .card.card--suvs .footer__button:hover {
+      background-color: #006970;
+      color: #f2f2f2; }
+
+.card.card--luxury {
+  background-color: #004241; }
+  .card.card--luxury .header__image--luxury {
+    background-image: url(../../images/icon-luxury.svg); }
+  .card.card--luxury .footer__button {
+    color: #004241; }
+    .card.card--luxury .footer__button:hover {
+      background-color: #004241;
+      color: #f2f2f2; }
+
+@media only screen and (min-width: 900px) {
+  .card:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem; }
+  .card:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-end-end-radius: 0.5rem;
+    border-top-right-radius: 0.5rem; } }
